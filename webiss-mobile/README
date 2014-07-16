@@ -1,0 +1,89 @@
+Running webiss on Android
+=========================
+
+Install nodejs
+--------------
+
+You can install nodejs using this site:
+
+    http://nodejs.org/
+
+Install Cordova
+---------------
+
+Once nodejs is installed you can install cordova using:
+
+    sudo npm install -g cordova
+
+Install Android Development Tools (ADT)
+---------------------------------------
+
+You'll need to install the ADT which can be dowloaded from here:
+
+    http://developer.android.com/sdk/index.html
+
+NOTE: If you install the 64-bit version on Ubuntu, you'll need to follow the
+following additional instructions:
+
+    sudo dpkg --add-architecture i386
+    sudo apt-get update
+    sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+    sudo apt-get install lib32z1
+
+The Android packages then need to be installed following these directions:
+
+    http://developer.android.com/sdk/installing/adding-packages.html
+    
+    Note: currently Android 17 is being used.
+
+Once the packages are installed you'll need to add the ADT to the path. This
+can be done by adding the following to your ~/.bashrc:
+
+    export PATH=$PATH:$ADT_PATH/sdk/platform-tools:$ADT_PATH/sdk/tools
+
+where $ADT_PATH is the path to your local adt installation. For example:
+
+    ~/Development/adt-bundle
+
+Then running:
+
+    source ~/.bashrc
+
+The plugins required by webiss-mobile can be installed by running:
+
+    make
+
+    in this directory.
+
+Change into the html/webiss-mobile/platforms/android folder, and run:
+
+    android update project --subprojects --path .
+
+Now back in the webiss-mobile directory the cordova app can be built using:
+
+    cordova build
+
+You can test the app in two ways:
+
+    cordova emulate android # test on an emulator (you must create one first)
+    OR
+    cordova run android # test on a device (must be plugged in, and develper enabled)
+
+============================================================================
+
+Running on Android:
+
+android list targets
+  list targets
+
+android create avd --force --name myCordova --target 1 --abi default/x86
+  creates avd; can also be done in gui running android
+
+cordova run --debug --emulator --target=myCordova android
+  launches emulator
+
+cordova run --debug --emulator android
+  reinstalls and runs application in emulator
+
+cordova run --debug android
+  installs application on device
