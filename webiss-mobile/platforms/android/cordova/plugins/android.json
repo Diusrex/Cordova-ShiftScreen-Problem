@@ -1,0 +1,26 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"ChromeLauncher\"><param name=\"android-package\" value=\"com.byhook.cordova.chromelauncher.ChromeLauncher\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.byhook.cordova.chromelauncher": {
+            "PACKAGE_NAME": "net.skatgame.webiss"
+        }
+    },
+    "dependent_plugins": {}
+}
