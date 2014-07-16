@@ -13,12 +13,11 @@ body,html
       Screen cannot be shifted back */
     /* overflow-y: hidden; /* Adding this on its own will cause the bug.
       Screen can be shifted back */
-    /* overflow: scroll; /* Will cause bug, but more importantly shows the shifted window area */
 }
 
 /* Size will be changed */
 canvas {
-    position: fixed;
+    /* position: fixed; /* Enabling this will cause the bug. */
     width: 100%;
     height: 100%;
     margin: 0;
