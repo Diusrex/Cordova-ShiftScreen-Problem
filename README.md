@@ -1,4 +1,5 @@
-This repository is meant to be a working example of the bug I have encountered within my program. The stackoverflow question can be found <HERE>.
+This repository is meant to be a working example of the bug I have encountered within my program. The stackoverflow question can be found at http://stackoverflow.com/questions/24789858/cordova-android-app-shifts-partially-offscreen-when-virtual-keyboard-disappears
+
 
 How to Run
 -------------------
