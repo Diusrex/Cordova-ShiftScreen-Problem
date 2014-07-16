@@ -49,13 +49,17 @@ Then running:
 
     source ~/.bashrc
 
+
+Configuring the project
+-----------------------
+
 The plugins required by webiss-mobile can be installed by running:
 
     make
 
     in this directory.
 
-Change into the html/webiss-mobile/platforms/android folder, and run:
+Change into the platforms/android folder, and run:
 
     android update project --subprojects --path .
 
