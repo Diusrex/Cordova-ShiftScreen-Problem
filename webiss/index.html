@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+<!--<html manifest="cached.appcache"> -->
+  <head>
+    <link href="style/main.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <!-- important: load cordova (will be copied when building) -->
+    <script src="cordova.js"></script> 
+
+  </head>
+
+  <body>
+
+    <canvas id="canvas">
+      HTML5 Canvas not supported.
+    </canvas>
+
+    <!-- sign in screen -->
+    <div id="signInScreen" class="myscreen">
+        <div class="skip"></div>
+        <table>
+          <tr>
+            <td>Username&nbsp;</td><td><input size="10"/>
+          </tr>
+          <tr>
+            <td>Password&nbsp;</td><td><input size="10" type="password"/>
+          </tr>
+        </table>
+    </div>
+    <script src="js/Main.js"></script>
+    <script src="js/screen/SignInScreen.js"></script>
+  </body>
+</html>
